@@ -1,0 +1,40 @@
+# Personal seed data (snippets, commands, settings — never commit)
+SeedData/
+
+# Xcode
+build/
+DerivedData/
+xcuserdata/
+*.xcuserstate
+*.xcworkspace/xcuserdata/
+*.xcodeproj/xcuserdata/
+*.xcodeproj/project.xcworkspace/xcuserdata/
+
+# Secrets & signing
+.env
+.env.*
+*.p8
+*.p12
+*.pem
+*.cer
+*.certSigningRequest
+*.mobileprovision
+*.provisionprofile
+
+# fastlane
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots/**/*.png
+fastlane/test_output
+fastlane/api_key.json
+fastlane/.env*
+fastlane/testflight/
+
+# Build artifacts
+*.ipa
+*.dSYM.zip
+*.dSYM
+*.xcarchive
+
+# macOS
+.DS_Store

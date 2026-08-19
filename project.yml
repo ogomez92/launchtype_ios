@@ -1,0 +1,50 @@
+name: Launchtype
+options:
+  bundleIdPrefix: com.oriolgomez
+  deploymentTarget:
+    iOS: "26.0"
+targets:
+  Launchtype:
+    type: application
+    platform: iOS
+    sources:
+      - path: Launchtype
+      - path: SeedData
+        type: folder
+        buildPhase: resources
+    info:
+      path: Launchtype/Resources/Info.plist
+      properties:
+        CFBundleDisplayName: Launchtype
+        UILaunchScreen: {}
+        ITSAppUsesNonExemptEncryption: false
+        UIFileSharingEnabled: true
+        LSSupportsOpeningDocumentsInPlace: true
+        UISupportedInterfaceOrientations:
+          - UIInterfaceOrientationPortrait
+          - UIInterfaceOrientationPortraitUpsideDown
+          - UIInterfaceOrientationLandscapeLeft
+          - UIInterfaceOrientationLandscapeRight
+    settings:
+      base:
+        SWIFT_VERSION: "6.2"
+        DEVELOPMENT_TEAM: 4TH9Y6ZAQC
+        PRODUCT_NAME: Launchtype
+        MARKETING_VERSION: "1.0.0"
+        CURRENT_PROJECT_VERSION: "1"
+        SWIFT_STRICT_CONCURRENCY: complete
+        ENABLE_USER_SCRIPT_SANDBOXING: true
+  LaunchtypeTests:
+    type: bundle.unit-test
+    platform: iOS
+    sources:
+      - path: LaunchtypeTests
+    info:
+      path: LaunchtypeTests/Info.plist
+      properties: {}
+    dependencies:
+      - target: Launchtype
+    settings:
+      base:
+        SWIFT_VERSION: "6.2"
+        SWIFT_STRICT_CONCURRENCY: complete
